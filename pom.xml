@@ -11,6 +11,7 @@
     <groupId>com</groupId>
     <artifactId>CulturoFesto</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>CulturoFesto</name>
     <description>cultural festival management system</description>
     <properties>
@@ -28,7 +29,19 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+            <exclusions>
+         		 <exclusion>
+ 			<groupId>org.springframework.boot</groupId>
+ 			<artifactId>spring-boot-starter-tomcat</artifactId>
+ 				</exclusion>
+			</exclusions >
+		</dependency>
+		<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<scope>provided</scope>
+		</dependency>
+       
         
         <dependency>
             <groupId>javax.validation</groupId>
