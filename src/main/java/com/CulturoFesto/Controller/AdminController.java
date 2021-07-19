@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,10 @@ public class AdminController {
 	@PostMapping("/admin")
     public String addAdmin(){
             return adminService.addAdmin();
+	}
+	@GetMapping("/welcome/{name}")
+	public String welcome(@PathVariable("name") String name) {
+		return name + "Welcome to CulturoFesto!!";
 	}
 	/*
 	 * @PostMapping("/admin/login") public String loginadmin(@RequestBody AdminInfo
