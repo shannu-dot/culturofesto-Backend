@@ -30,7 +30,7 @@ public class AdminController {
 	}
 	@GetMapping("/welcome/{name}")
 	public String welcome(@PathVariable("name") String name) {
-		return name + "Welcome to CulturoFesto!!";
+		return name + "...Welcome to CulturoFesto!!";
 	}
 	/*
 	 * @PostMapping("/admin/login") public String loginadmin(@RequestBody AdminInfo
